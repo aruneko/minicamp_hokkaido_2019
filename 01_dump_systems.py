@@ -17,7 +17,7 @@ def on_connect(tag) -> None:
 
 def main() -> None:
     # USBのNFCリーダーに接続
-    with nfc.ContactlessFrontend('usb') as clf:
+    with nfc.ContactlessFrontend('usb:054c:06c3') as clf:
         options = {
             # FeliCaだけと通信
             'targets': ['212F'],
