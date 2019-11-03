@@ -1,0 +1,6 @@
+-i https://pypi.org/simple
+libusb1==1.7.1
+ndeflib==0.3.3
+nfcpy==1.0.3
+pydes==2.0.1
+pyserial==3.4
