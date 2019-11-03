@@ -10,10 +10,10 @@ def on_connect(tag) -> None:
         system_codes = tag.request_system_code()
         # 取得したSystem Codeを表示
         for system in system_codes:
-            print(f"System Code: {hex(system)}")
+            print(f"System Code: 0x{system:04x}")
     except:
         # System Code取得命令に対応していないカード用
-        print(f"System Code: {hex(tag.sys)}")
+        print(f"System Code: 0x{tag.sys:04x}")
 
 def main() -> None:
     # USBのNFCリーダーに接続
