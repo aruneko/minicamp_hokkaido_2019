@@ -3,7 +3,6 @@
 
 import nfc
 
-
 # logger = getLogger('nfc')
 # logger.setLevel(0)
 # basicConfig(level=0)
