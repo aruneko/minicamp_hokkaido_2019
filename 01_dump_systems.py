@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
+# from logging import getLogger, basicConfig
+
 import nfc
+
+
+# logger = getLogger('nfc')
+# logger.setLevel(0)
+# basicConfig(level=0)
 
 
 def on_connect(tag) -> None:
@@ -22,7 +29,7 @@ def main() -> None:
     with nfc.ContactlessFrontend('usb:054c:06c3') as clf:
         options = {
             # FeliCaだけと通信
-            'targets': ['212F'],
+            'targets': ['212F', '424F'],
             # カードを検知したタイミングでon_connect関数を呼び出す
             'on-connect': on_connect
         }
@@ -30,4 +37,5 @@ def main() -> None:
         clf.connect(rdwr=options)
 
 
-main()
+if __name__ == '__main__':
+    main()
