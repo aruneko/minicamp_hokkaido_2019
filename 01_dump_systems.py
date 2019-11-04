@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import nfc
-from nfc.tag.tt3 import Type3TagCommandError
 
 
 def on_connect(tag) -> None:
@@ -13,7 +12,7 @@ def on_connect(tag) -> None:
         # 取得したSystem Codeを表示
         for system in system_codes:
             print(f"System Code: 0x{system:04x}")
-    except Type3TagCommandError:
+    except AttributeError:
         # System Code取得命令に対応していないカード用
         print(f"System Code: 0x{tag.sys:04x}")
 
