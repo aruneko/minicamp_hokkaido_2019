@@ -1,4 +1,4 @@
-from libs.type3_tag import Type3Tag
+from libs.type3_tag import Type3Tag, ServiceCode, BlockCode
 
 
 def main() -> None:
