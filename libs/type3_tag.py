@@ -14,7 +14,7 @@ class ServiceCode:
 
     @property
     def number(self):
-        return self._number.to_bytes(2, 'big')
+        return self._number.to_bytes(3, 'big')
 
     @property
     def attribute(self):
